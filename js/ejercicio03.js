@@ -20,7 +20,7 @@ function teclado(e1) {
     titulo.innerHTML = "Teclado";
     datos.innerText = `
     Caracter [${e1.key}]
-    Código [${e1.code}]`;
+    Código [${e1.keyCode}]`;
     info.style.backgroundColor = "#CCE6FF";
 }
 
