@@ -1,33 +1,14 @@
-var datos = document.getElementById("datos");
-var titulo = document.getElementById("titulo");
-var info = document.getElementById("info")
 
-let body = document.querySelector('#body');
-document.addEventListener('mousemove', raton);
 
-let body1 = document.querySelector('#body');
-document.addEventListener('keydown', teclado);
+let boton = document.getElementsByClassName("BotonAñadir")[0];
 
-function raton(e) {
-    titulo.innerHTML = "Ratón";
-    datos.innerText = `
-    Navegador [${e.screenX}, ${e.screenY}]
-    Página [${e.clientX}, ${e.clientY}]`;
-    info.style.backgroundColor = null;
+boton.addEventListener("click", anadirObjetos);
+
+function anadirObjetos() {
+
+    let lista = document.getElementsByTagName("ul")[0];
+    var item = document.getElementsByClassName("AñadirElemento")[0].value;
+    var li = document.createElement("li");
+    li.innerHTML = item;
+    lista.appendChild(li);
 }
-
-function teclado(e1) {
-    titulo.innerHTML = "Teclado";
-    datos.innerText = `
-    Caracter [${e1.key}]
-    Código [${e1.keyCode}]`;
-    info.style.backgroundColor = "#CCE6FF";
-}
-
-function cambiarColor(){
-    info.style.backgroundColor = "#FFFFCC";
-}
-
-
-
-
