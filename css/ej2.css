@@ -1,0 +1,18 @@
+
+.oscuro{
+    width: 20%;
+    background-color: black;
+}
+.oscuro p{
+    color: white;
+}
+
+.inverso{
+    width: 20%;
+    background-color: white;
+}
+.inverso p{
+
+    color: black;
+
+}
